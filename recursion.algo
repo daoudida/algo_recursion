@@ -1,0 +1,20 @@
+ALGORITHM algorithm_Palindrome
+VAR
+    longueur: INTEGER;
+    mot, inverse: STRING
+    i: INTEGER
+BEGIN
+    ecrire("Veuillez saisir un mot")
+    lire(mot)
+    longueur := LENGTH(mot)
+
+    POUR i <-- longueur - 1 À 0 PAR PAS DE -1 FAIRE
+        inverse := inverse + mot[i]
+    FIN POUR
+
+    SI mot == inverse ALORS
+        ecrire("Ce mot est un palindrome")
+    SINON
+        ecrire("Ce mot n'est pas un palindrome")
+    FIN SI
+END
